@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/start_screen_container.dart';
 
 class Quiz extends StatefulWidget {
- constx Quiz({super.key});
+ const Quiz({super.key});
   @override
   State<Quiz> createState() {
-    return _quizState();
+    return _QuizState();
   }
 }
 
-class _quizState extends State<Quiz> {
+class _QuizState extends State<Quiz> {
   @override
   Widget build(context) {
     return MaterialApp(
