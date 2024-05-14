@@ -1,7 +1,16 @@
 import "package:flutter/material.dart";
 
 class QuestionContainer extends StatefulWidget {
-  QuestionContainer({super.key})
+ const QuestionContainer({super.key});
   @override 
-  return 
+  State<QuestionContainer> createState() {
+    return _QuestionContainerState();
+  }
+}
+
+class _QuestionContainerState extends State<QuestionContainer> {
+  @override
+  Widget build(context) {
+    return const Text("Questionnaire");
+  }
 }
