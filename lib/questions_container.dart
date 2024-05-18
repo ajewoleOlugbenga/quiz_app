@@ -11,17 +11,23 @@ class QuestionContainer extends StatefulWidget {
 class _QuestionContainerState extends State<QuestionContainer> {
   @override
   Widget build(context) {
-    return Column(
-      children: [
-        const Text("The question..."),
-        const SizedBox(
-          height: 30,
-        ),
-        ElevatedButton(onPressed: () {}, 
-        child: const Text("Answer 1")),
-        ElevatedButton(onPressed: () {}, child: const Text("Answer 2")),
-        ElevatedButton(onPressed: () {}, child: const Text("Answer 3")),
-      ],
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("The question..."),
+          const SizedBox(
+            height: 30,
+          ),
+          ElevatedButton(onPressed: () {}, 
+          child: const Text("Answer 1")),
+          ElevatedButton(onPressed: () {}, 
+          child: const Text("Answer 2")),
+          ElevatedButton(onPressed: () {},
+           child: const Text("Answer 3")),
+        ],
+      ),
     );
   }
 }
