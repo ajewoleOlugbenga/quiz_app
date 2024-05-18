@@ -16,7 +16,8 @@ class _QuestionContainerState extends State<QuestionContainer> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text("The question..."),
+          const Text("The question...", 
+          style: TextStyle(color: Colors.white)),
           const SizedBox(
             height: 30,
           ),
