@@ -21,8 +21,7 @@ class _QuestionContainerState extends State<QuestionContainer> {
           const SizedBox(
             height: 30,
           ),
-          ElevatedButton(onPressed: () {}, 
-          child: const Text("Answer 1")),
+          
           ElevatedButton(onPressed: () {}, 
           child: const Text("Answer 2")),
           ElevatedButton(onPressed: () {},
