@@ -4,7 +4,7 @@ import "package:quiz_app/data/questions.dart";
 import "package:google_fonts/google_fonts.dart";
 
 class QuestionContainer extends StatefulWidget {
-  const QuestionContainer(this.onSelectAnswer,{super.key});
+  const QuestionContainer(this.onSelectAnswer, {super.key});
   final void Function(String answer) onSelectAnswer;
   @override
   State<QuestionContainer> createState() {
@@ -15,7 +15,8 @@ class QuestionContainer extends StatefulWidget {
 class _QuestionContainerState extends State<QuestionContainer> {
   var currentQuestionIndex = 0;
 
-  void changeQuestion () {
+  void changeQuestion(String currentAnswers) {
+    widget.onSelectAnswer(currentAnswers);
     setState(() {
       //currentQuestionIndex = currentQuestionIndex + 1;
       currentQuestionIndex++;
@@ -33,20 +34,25 @@ class _QuestionContainerState extends State<QuestionContainer> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(currentQuestions.questions,
-                style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign:TextAlign.center,
-                ),
-                
+            Text(
+              currentQuestions.questions,
+              style: GoogleFonts.lato(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(
               height: 30,
             ),
             ...currentQuestions.getShuffledAnswers().map((answer) {
-              return AnswerButton(answer, changeQuestion);
+              return AnswerButton(
+                answer,
+                () {
+                  changeQuestion(answer);
+                },
+              );
             })
           ],
         ),
