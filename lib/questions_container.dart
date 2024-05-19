@@ -32,7 +32,7 @@ class _QuestionContainerState extends State<QuestionContainer> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(currentQuestions.questions[0],
+            Text(currentQuestions.questions,
                 style: GoogleFonts.lato(
                   color: Colors.white,
                   fontSize: 24,
