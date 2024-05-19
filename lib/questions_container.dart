@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/answer_button.dart";
 import "package:quiz_app/data/questions.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class QuestionContainer extends StatefulWidget {
   const QuestionContainer({super.key});
@@ -32,7 +33,11 @@ class _QuestionContainerState extends State<QuestionContainer> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(currentQuestions.questions[0],
-                style: const TextStyle(color: Colors.white),
+                style: GoogleFonts.lato(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
                 textAlign:TextAlign.center,
                 ),
                 
