@@ -13,7 +13,7 @@ final void Function() startQuiz;
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            'assets/images/quiz-logo.png',
+            'assets/images/olugbenga-logo.png',
             width: 300,
             color: const Color.fromARGB(125, 255, 255, 255),
           ),
@@ -21,7 +21,7 @@ final void Function() startQuiz;
             height: 80,
           ),
           Text(
-            "learn flutter the fun way",
+            "Do you Know Me?",
             style: GoogleFonts.lato(
               color: Colors.white70,
               fontSize: 24,
