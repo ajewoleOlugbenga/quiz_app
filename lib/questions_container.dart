@@ -4,7 +4,8 @@ import "package:quiz_app/data/questions.dart";
 import "package:google_fonts/google_fonts.dart";
 
 class QuestionContainer extends StatefulWidget {
-  const QuestionContainer({super.key});
+  const QuestionContainer(this.onSelectAnswer,{super.key});
+  final void Function(String answer) onSelectAnswer;
   @override
   State<QuestionContainer> createState() {
     return _QuestionContainerState();
