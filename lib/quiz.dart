@@ -21,7 +21,15 @@ class _QuizState extends State<Quiz> {
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        
+        activeScreen = const Center(
+          child: Text(
+            "You've completed the quiz!",
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+          ),
+        );
       });
     }
   }
